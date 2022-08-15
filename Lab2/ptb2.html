@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var a = prompt("Nhập hệ số a: ");
+        var b = prompt("Nhập hệ số b: ");
+        var c = prompt("Nhập hệ số c: ");
+        var dental = Math.pow(b,2) - 4 * a * c;
+        
+        if(dental < 0){
+        alert("Thông báo vô nghiệm")
+        }
+        else if(dental == 0){
+            x = (-b)/(2*a);
+        alert("Có 1 nghiệm kép: "+ x);
+        }
+        else{
+            x1 = -b + Math.sqrt(dental)/2*a;
+            x2 = -b - Math.sqrt(dental)/2*a;
+        alert("Có 2 nghiệm phân biệt: "+ x1 + x2);
+        }
+    </script>
+</body>
+</html>>

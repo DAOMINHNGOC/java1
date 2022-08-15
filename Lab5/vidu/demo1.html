@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="#" name="frmTenform" onsubmit="return validate();">
+        
+         <input type="text"name="txtName" placeholder="Nhập họ tên">
+            <p id="loiht" style="color: red;"></p>
+         <input type="text"name="txtsdt" placeholder="Nhập số điện thoại">
+            <p id="loisdt" style="color: blue;"></p>
+            <input type="text" name="txtEmail" placeholder="Nhập email">
+            <p id="loiemail" style="color: aquamarine;"></p>
+         <p><button type="submit">Gửi dữ liệu</button></p>
+    </form>
+    <script>
+        function validate(){
+            var hoten = document.frmTenform.txtName.value;
+            var sdt = document.frmTenform.txtsdt.value;
+            var ok = true;
+            // họ tên
+            if(hoten.length == 0){
+                document.getElementById("loiht").innerHTML ="Mời nhập họ tên vào ô trống";
+                ok = false;
+            }
+            else document.getElementById("loiht").innerHTML ="";
+            return true;
+            // số điện thoại
+             if(sdt.length == 0){
+                document.getElementById("loisdt").innerHTML = "Mời nhập số điện thoại vào ô trống";
+                ok = false;
+            }
+            else document.getElementById("loisdt").innerHTML ="";
+            return true;
+            //email
+            if(email.length == 0){
+                document.getElementById("loiemail").innerHTML = "Mời nhập email vào ô trống";
+                ok = false;
+            }
+            else document.getElementById("loiemail").innerHTML ="";
+            return true;
+            //Kiểm tra
+            if(ok){
+                alert ="Gửi thành công"; 
+                return true;
+            }
+            else return false;
+        }
+    </script>
+</body>
+</html>>

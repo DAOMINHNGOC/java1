@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+ <div id="demo">
+
+ </div>
+ <p>
+     <button id = "btnCreate">Tạo điều khiển</button>
+ </p>
+ <script>
+     var demo = document.getElementsById("demo");
+     var btnCreate = document.getElementById("btnCreate");
+     // Tạo đối tượng element node
+     var IbName = document.createEvent("label");
+     var txtName = document.createElement("input");
+     var btnDisplay = document.createElement("button");
+
+     btnCreate.onclick = function(){
+      demo.appendChild(IbName).innerHTML = "Product name";
+      demo.appendChild(txtName);
+      txtName.setAttribute("type","text");
+      demo.appendChild(btnDisplay).innerHTML = "Display";
+      btnCreate.style.display = "none";
+     }
+ </script>
+</body>
+</html>

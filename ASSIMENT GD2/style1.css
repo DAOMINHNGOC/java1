@@ -1,0 +1,154 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+#container {
+    width: 960px;
+    margin: 0px auto;
+}
+
+/* Phần header */
+header {
+    height: 250px;
+    max-height: 344px;
+    background-image: url(../ASS\ GD1/images/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Phần Menu */
+nav {
+    line-height: 24px;
+    padding: 10px 10px;
+    background: green;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    transition: 0.4s;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: red;
+    padding: 12px 15px 13px;
+}
+
+.active {
+    background-color: #ffffff;
+    color: red;
+    padding: 12px 15px 13px;
+}
+
+/* Phần Nội dung */
+article {
+    margin-top: 5px;
+    padding-bottom: 20px;
+    min-height: 400px;
+    width: 100%;
+    background: #ffffff;
+    float: left;
+}
+
+article p {
+    margin: 10px 0px;
+}
+
+article > table th,
+article > table td {
+    padding: 5px 0px;
+    text-align: center;
+}
+
+article > table td input[type="text"] {
+    width: 90%;
+}
+
+/* Hiển thị ảnh sản phẩm*/
+#display {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    margin-bottom: 10px;
+}
+
+#display > img {
+    width: 100%;
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Phần footer */
+footer {
+    height: 100px;
+    max-height: 100px;
+    background: green;
+    color: #ffffff;
+}
+
+.f1 {
+    width: 25%;
+    height: 100%;
+    background-image: url(../ASS\ GD1/images/logo.jpg);
+    background-position: center center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.f2 {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+/* js */
+table {
+    border-collapse: collapse;
+    width: 700px;
+}
+
+th {
+    background-color: #0060af;
+    color: #fff;
+}
+
+td:nth-child(1),
+td:nth-child(3),
+td:nth-child(4) {
+    text-align: center;
+}
+
+td,
+th {
+    padding: 8px;
+}
+
+tr:nth-child(2n+1) {
+    background-color: rgb(95, 177, 95);
+}
+
+tr:last-child {
+    background-color: #ccc;
+}
+
+table input[type="text"] {
+    width: 100%;
+}
+
+table input[type="number"] {
+    text-align: center;
+}
+
+button {
+    padding: 1px 10px;
+}

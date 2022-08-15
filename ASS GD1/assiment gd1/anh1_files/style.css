@@ -1,0 +1,114 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+#container {
+    width: 960px;
+    margin: 0px auto;
+}
+
+/* Phần header */
+header {
+    height: 250px;
+    max-height: 344px;
+    background-image: url(images/Banner1-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Phần Menu */
+nav {
+    line-height: 24px;
+    padding: 10px 10px;
+    background: #0b5051;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    transition: 0.4s;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #EEA200;
+    padding: 12px 15px 13px;
+}
+
+.active {
+    background-color: #ffffff;
+    color: #EEA200;
+    padding: 12px 15px 13px;
+}
+
+/* Phần Nội dung */
+article {
+    margin-top: 5px;
+    padding-bottom: 20px;
+    min-height: 400px;
+    width: 100%;
+    background: #ffffff;
+    border-top: 2px solid #EEA200;
+    float: left;
+}
+
+article p {
+    margin: 10px 0px;
+}
+
+article > table th,
+article > table td {
+    padding: 5px 0px;
+    text-align: center;
+}
+
+article > table td input[type="text"] {
+    width: 90%;
+}
+
+/* Hiển thị ảnh sản phẩm*/
+#display {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    margin-bottom: 10px;
+}
+
+#display > img {
+    width: 100%;
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Phần footer */
+footer {
+    height: 100px;
+    max-height: 100px;
+    background: #0b5051;
+    color: #ffffff;
+}
+
+.f1 {
+    width: 25%;
+    height: 100%;
+    background-image: url(images/logo.png);
+    background-position: center center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.f2 {
+    width: 75%;
+    height: 100%;
+    float: left;
+}

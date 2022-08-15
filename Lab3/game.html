@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var a = Number(prompt("Nhập một số bát kì: "));
+        var x = Math.round(Math.random()*100);
+        while(true){
+        if(a == x){
+            alert("Đã đoán đúng");
+            break;
+        }
+        else if(a != x){
+            if( a > x){
+                alert("Số nhập vào lớn hơn số bí mật");
+                break;
+            }else if(a< x){
+                alert("Số nhập vào nhỏ hơn số bí mật");
+                break;
+            }
+        }
+    }
+    </script>
+</body>
+</html>>

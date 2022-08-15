@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h3>Đặt hàng</h3>
+    <form action="#" name ="frmDangKy" onsubmit="return validate();">
+
+      <!-- Sản phẩm -->
+        Sản phẩm <input type="text" name="txtName" placeholder="Vui lòng nhập tên sản phẩm">
+                 <p id="loiname" style="color: red;"></p>
+       <!-- Loại -->
+        Loại<select>
+            <option value="#" name ="slloai"></option>
+            <option value="#" name ="slloai">To</option>
+            <option value="#" name ="slloai">nhỏ</option>
+             </select>
+             <p id="loiloai" style="color: red;"></p>
+       <!-- Đơn giá -->
+        Đơn giá <input type="text" name="txtDongia" placeholder="Vui lòng nhập đơn giá">
+                <p id="loidongia" style= "color: red;"></p>
+       <!-- Nơi nhận hàng -->
+       <p> Nơi nhận hàng
+        <input type="radio" name="rdRadio" id="rdNoi" value="Noithanh" onclick="phiVanChuyen(this);"> Nội thành
+        <input type="radio" name="rdRadio" id="rdNgoai" value="Ngoaithanh" onclick="phiVanChuyen(this);"> Ngoại thành<br>
+        <label id="phiVC"></label>
+        <hr>
+    </p>
+
+       <!-- Gứi -->
+        <button  type="submit">đặt mua</button>
+    </form>
+
+    <script>
+        function phiVanChuyen(rdo) {
+            if (rdo.value == "Noithanh") {
+                document.getElementById("phiVC").innerText = "";
+            }
+            if (rdo.value == "Ngoaithanh") {
+                document.getElementById("phiVC").innerText = "Phí vận chuyển: 100000";
+            }
+        }
+        function validate(){
+            var sp = document.frmDangKy.txtName.value;
+            var dongia = document.frmDangKy.txtDongia.value;
+            // var loai = document.frmDangKy.slloai.value;
+            var ok = true;
+
+            if(sp.length == 0){
+                document.getElementById("loiname").innerHTML ="Chưa nhập sản phẩm";
+                ok = false;
+            } else{
+                document.getElementById("loiname").innerHTML = "";
+            }
+            if(dongia.length > 0 , dongia.length == 0){
+                document.getElementById("loidongia").innerHTML = "Chưa nhập đơn giá hoặc đơn giá phải dương"
+                ok = false;
+            } else{
+                document.getElementById("loidongia").innerHTML = "";
+            }
+            // if(!loai[1].checked , !loai[2].checked){
+            //     document.getElementById("loiloai").innerHTML = "Chưa chọn loại"; 
+            //     ok = false;
+            // }  else{
+            //     document.getElementById("loiloai").innerHTML = "";
+            // }
+            
+        
+        if(ok){
+            alert("Đã đặt mua")
+            return true;
+        }
+        else return false;
+    }
+    </script>
+</body>
+</html>

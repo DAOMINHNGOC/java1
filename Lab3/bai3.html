@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var a = [];
+        var n = Number(prompt("Nhâp sô phần tử: "));
+        var dem = 0;
+        var tong = 0;
+        for(var i = 0; i< n; i++){
+            a[i] = prompt("Nhập giá trị phần tử a["+i+"]: ");
+            document.write(a[i]+"<br>");
+            
+            tong +=i;
+        }
+       
+        document.write("Tổng là: "+tong);
+    </script>
+</body>
+</html>>

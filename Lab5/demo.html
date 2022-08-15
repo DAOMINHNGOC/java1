@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .container{
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+        button{
+           
+            width: 70px;
+            margin: 10px 15px;
+            border: 2px solid black;
+            background-color: blue;
+            color: white;
+            
+        }
+        button:hover{
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="slideshow" src="images/slide1.jpg" alt=""><br>
+     <button onclick="pre()">Prevoues</button>
+    <button onclick="auto()">Auto</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="next()">Next</button>
+    </div>
+
+    <script>
+        var slideshow = document.querySelector("#slideshow");
+var imgArr = [];
+index = 0;
+document.body.onload = function(){
+    for(var i = 0; i<4; i++){
+        imgArr[i] = new Image();
+        imgArr[i].src = "images/slide" +( i+1)+".jpg";
+        
+    }
+    auto();
+}
+function next(){
+    index++;
+    if(index > 3) index = 0;
+    slideshow.src = imgArr[index].src;
+}
+function pre(){
+    index--;
+    if(index<0) index = 3;
+    slideshow.src = imgArr[index].src;
+}
+var t;
+function auto(){
+    clearInterval(t);
+    t = setInterval("next()",1000);
+}
+
+function stop(){
+    clearInterval(t);
+}
+    </script>
+</body>
+</html>

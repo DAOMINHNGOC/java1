@@ -1,0 +1,134 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.one img {
+    width: 100%;
+}
+
+.one {
+    display: none;
+}
+
+.slideShow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgb(221, 39, 39);
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+#container {
+    width: 960px;
+    margin: 0px auto;
+}
+
+header {
+    height: 250px;
+    background-image: url(images/bia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    line-height: 25px;
+    padding: 10px;
+    background: lightseagreen;
+    text-align: center;
+}
+
+nav a {
+    transition: 0.5s;
+    color: white;
+    padding: 0px 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: white;
+    color: red;
+    padding: 12px 15px 13px;
+}
+
+article {
+    margin-top: 5px;
+    padding-bottom: 20px;
+    min-height: 400px;
+    width: 100%;
+    background: white;
+    float: left;
+}
+
+.active {
+    background-color: white;
+    color: red;
+    padding: 12px 15px 13px;
+}
+
+article p {
+    margin: 10px 0px;
+}
+
+#error {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#hinh {
+    width: 100%;
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    height: 100px;
+    max-height: 100px;
+    background: lightseagreen;
+    color: white;
+}
+
+.ft1 {
+    width: 25%;
+    height: 100%;
+    background-image: url(images/fpt.png);
+    background-position: center center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.ft2 {
+    width: 75%;
+    height: 100%;
+    float: left;
+}

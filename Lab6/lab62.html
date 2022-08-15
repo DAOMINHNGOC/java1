@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="#" name="frmDangky" onsubmit="return validate();">
+        <h3>FORM ĐĂNG KÝ</h3>
+        <!-- Họ -->
+        Họ <input type="text" name="txtfirstname" placeholder="Không để trống họ">
+            <p id="loiho" style="color: red;"></p>
+        <!-- tên -->
+        Tên <input type="text" name="txtlastname" placeholder="không để trống tên">
+            <p id="loiten" style="color: red;"></p>
+        <!-- Ngày sinh -->
+        Ngày sinh <input type="date" name ="dtngay" >
+                  <p id="loingay" style="color: red;"></p>
+        <!-- Giới tính -->
+        Giới tính <label for="#"><input type="radio" name = "rdgioitinh">Nam 
+                  <input type="radio" name="rdgioitinh" >Nữ
+                </label>
+                <p id="loigioitinh" style="color: red;"></p>
+                
+
+        <!-- Số điện thoại -->
+        Số điện thoại<input type="text" name="txtSDT" placeholder="Điền số điện thoại">
+                     <p id="loisdt" style="color: red;"></p>
+        <!-- Sở thích -->
+        Sở thích <p><label for=""><input type="checkbox" value="Đọc sách" name="sothich" >Đọc sách</label> 
+            <label><input type="checkbox"value="Đọc sách"  name="sothich" >xem phim</label> 
+            <label><input type="checkbox" value="nghe" name="sothich" >nghe</label> 
+            <label><input type="checkbox" value="Bóng đá" name="sothich" >Bóng đá</label> 
+            <label><input type="checkbox" value="May vá" name="sothich">May vá</label>
+            <label><input type="checkbox" value="May vá" name="sothich" onclick="hienthi(checked);">Khác</label> </p>
+            <p id="loisothich" style="display: none;">
+                <label for="">Sở thích khác</label>
+            <input type="text">
+
+        </p>
+            <hr>
+        <!-- Đăng ký -->
+        <button type="submit">Gửi dữ liệu</button>
+    </form>
+    <script>
+       function hienthi(){
+               var loisothich = document.getElementById("loisothich");
+               loisothich.style.display = check ? "" :"none"
+       }
+        function validate(){
+
+            var ho = document.frmDangky.txtfirstname.value;
+            var ten = document.frmDangky.txtlastname.value;
+            var ngay = document.frmDangky.dtngay.value;
+            // var rdgioitinh = document.frmDangky.rdgioitinh.value;
+            var sdt = document.frmDangky.txtSDT.value;
+            var count = 0;
+            
+            var ok = true;
+            // first name
+            if(ho.length == 0){
+                document.getElementById("loiho").innerHTML = "Cần điền firstname";
+                ok = false;
+            }
+            else{
+                document.getElementById("loiho").innerHTML ="";
+            }
+            // last name
+            if(ten.length == 0){
+                document.getElementById("loiten").innerHTML ="Cần điền lastname";
+                ok = false;
+            }
+            else{
+                document.getElementById("loiten").innerHTML ="";
+            }
+            // ngày tháng năm
+            if(ngay == ""){
+                document.getElementById("loingay").innerHTML = "Cần chọn ngày/tháng/năm";
+                ok = false;
+            }
+            //Giới tính
+            // if(!rdgioitinh[0].checked , !rdgioitinh[1].checked){
+            //     document.getElementById("loigioitinh").innerHTML = "Cần chọn giới tính";
+            //     ok = false;
+            // }
+            // else document.getElementById("loigioitinh").innerHTML = "";
+            //số điện thoại
+            if(sdt.length < 11){
+                document.getElementById("loisdt").innerHTML ="Chưa nhập số điện thoại";
+                ok = false;
+            }
+            else document.getElementById("loisdt").innerHTML ="";
+            
+            for(let i = 0; i< sothich.length;i++){
+                if(sothich[i].checked){
+                    count++
+                }
+            }
+            if(count<1){
+                alert("Phải chọn ít nhất một sở thích");
+            }
+            if(ok){
+                alert("Đăng ký thành công");
+                return true;
+            }else  return false;
+        }
+    </script>
+</body>
+</html>

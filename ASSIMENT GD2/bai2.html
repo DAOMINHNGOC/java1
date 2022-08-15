@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style1.css">
+    <script src="/angular.js"></script>
+    
+</head>
+<body >
+    <div id="container">
+    <!-- Phần đầu -->
+        <header></header>
+        <!-- Phần menu -->
+        <nav>
+            <a href="../ASS GD1/bai1.html">ASM 1: BÀI 1</a>
+            <a href="../ASS GD1/bai2.html">ASM 1: BÀI 2</a>
+            <a href="bai1.html">ASM 2: BÀI 1</a>
+            <a href="bai2.html" class="active">ASM 2: BÀI 2</a>
+        </nav>
+    <!-- Phần nội dung chính-->
+        <article class="noidung" ng-app ="myApp">
+            
+                <div style="margin: 0 auto; width:700px;" ng-controller="myCtrl">
+                    <h3>DANH MỤC SẢN PHẨM</h3>
+                <p style="padding: 5px 0;">Tên sản phẩm <input type="text" ng-model="tenSP" />
+                    Đơn giá <input style="width: 80px;" type="text" ng-model="dongia" />
+                    Số lượng <input type="number" min="0" max="99" ng-model="soLuong" />
+                    <button ng-click="them()"> Thêm sản phẩm </button>
+                    <!-- <button ng-click="clear()">Xóa sản phẩm</button> -->
+                </p>
+                <table border="1" style="border-collapse:collapse;">
+                   <tr class="tieude">
+                       <th style="width:10%">STT</th>
+                       <th style="width:25%">Tên sản phẩm</th>
+                       <th style="width:20%">Đơn giá</th>
+                       <th style="width:20%">Số lượng</th>
+                       <th style="width:20%">Thành tiền</th> 
+                   </tr>
+                   <tr ng-repeat="item in dsSP">         
+                    <td><label>{{$index + 1}}</label></td>
+                    <td><label>{{item.tenSP}}</label></td>
+                    <td><input type="text" value="{{item.dongia}}" ng-model="item.dongia"></td>
+                    <td><input style="width: 40px;" type="number" min="0" max="99" value="{{item.soLuong}}" ng-model="item.soLuong"></td>
+                    <td style="text-align: right;">
+                        <label>{{item.dongia*item.soLuong}}</label>
+                    </td>   
+                   </tr>
+                   <tr>
+                    <td colspan="6" style="text-align: right; font-weight: bold;">Tổng tiền: {{tinhTong()}}</td>
+                </tr> 
+                </table>
+            </div>
+        </article>
+        <!-- Phần nội dung -->
+        <aside></aside>
+        <!-- Phần cuối -->
+        <div class="clear"></div>
+        <footer>
+            <div class="f1"></div>
+            <div class="f2">
+                <p style="line-height: 25px;">Trường cao đẳng FPT Polytechnic<br />
+                    Địa chỉ: Số 13, Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br />
+                    Email: caodang@fpt.edu.vn</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Liên kết với bài2.js -->
+    <script src="bai2.js"></script>
+</body>
+</html>

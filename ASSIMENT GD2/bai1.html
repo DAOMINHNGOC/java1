@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+    <!-- Phần đầu -->
+        <header></header>
+        <!-- Phần menu -->
+        <nav>
+            <a href="../ASS GD1/bai1.html">ASM 1: BÀI 1</a>
+            <a href="../ASS GD1/bai2.html">ASM 1: BÀI 2</a>
+            <a href="bai1.html" class="active">ASM 2: BÀI 1</a>
+            <a href="bai2.html">ASM 2: BÀI 2</a>
+        </nav>
+    <!-- Phần nội dung -->
+        <article>
+            <div class="noidung">
+            <form action="#" name="frmdangky" onsubmit="return validateForm();">
+                <table border="1" class="bangdangky">
+                <h2>Đăng ký thông tin</h2>
+                <!-- Họ tên -->
+            <div class="row"><input type="text" name="txtname" placeholder="Vui lòng nhập Họ tên">
+            <div class="mau" id="loiname"></div> </div>
+            <!-- email -->
+            <div class="row"><input type="text" name="txtemail" placeholder="Vui lòng nhập email">
+            <div class="mau" id="loiemail"></div></div>
+            <!-- sdt -->
+            <div class="row"><input type="text" name="txtsdt" placeholder="vui lòng nhập số điện thoại">
+            <div class="mau" id="loisdt"></div></div>
+            <!-- nghành học  -->
+            <div class="row">
+                <select name="slnganhhoc" >
+                    <option selected="selected">Lựa chọn nghành học</option>
+                    <option value="">Thiết kế trang web</option>
+                    <option >Thiết kế đồ họa</option>
+                    <option>Ứng dụng phần mềm </option>
+                    <option>Thương mại điện tử</option>
+                </select> 
+                <div id="loinganhhoc" style="color: red;"></div> </div>
+                <!-- Giới tính -->
+                <div class="row" id="banggt">
+                    <label style="padding-right: 20px;"> Giới tính</label>
+                    <div class="form-inline">
+            <input type="radio" name="rdradio">Nam
+            <input type="radio" name="rdradio" >Nữ
+            <div class="mau" id="loigioitinh"></div></div></div>
+            <!-- ngày sinh -->
+            <div class="row"><input type="date" name="dtngay">
+            <div class="mau" id="loingay"></div></div>
+            <div class="row">
+                <label>Sở thích <i>(Không bắt buộc nhập)</i></label>
+                <div class="form-inline">
+                <input type="checkbox" name="cksothich">Thể thao
+                <input type="checkbox" name="cksothich">Xem phim
+                <input type="checkbox" name="cksothich">Nghe nhạc
+                <input type="checkbox" name="cksothich">Khác</div>
+            <div><input type="submit" value="Đăng ký" style="background-color: blue; color: white;"> </div>
+        </table>
+        </form>
+    </div>
+        </article>
+        <!-- Phần nội dung -->
+        <aside></aside>
+        <!-- Phần cuối -->
+        <div class="clear"></div>
+        <footer>
+            <div class="f1"></div>
+            <div class="f2">
+                <p style="line-height: 25px;">Trường cao đẳng FPT Polytechnic<br />
+                    Địa chỉ: Số 13, Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br />
+                    Email: caodang@fpt.edu.vn</p>
+            </div>
+        </footer>
+    </div>
+    <script src="bai1.js"></script>
+</body>
+</html>

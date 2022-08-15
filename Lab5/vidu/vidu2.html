@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <img src="" alt="" id="hinh" width="400px" >
+    <p name ="hien"></p>
+    <p>
+        
+    <select id="sanpham" onchange="hienhinh()">
+    <option value="">hãy chọn sản phảm</option>
+    <option value="giay">Giày</option>
+    <option value="mu">Mũ</option>
+    <option value="anh">Ảnh linh tinh</option>
+    <option value="logo">Ảnh logo fpt</option>
+    
+</select>
+    </p>
+<script>
+
+    function hienhinh(){
+        var sp = document.getElementById("sanpham");
+        var hinh = document.getElementById("hinh");
+        var hien = document.getElementsByTagName("hien");
+        switch(sp.value){
+            case 'mu':
+                 hinh.src="6.jpg";
+                 hien[0].innerHTML= "mũ mới";
+                 hien[1].innerHTML="Giá: 10.000 vnd";
+            break;
+            case 'giay':
+                 hinh.src = "5.jpg";
+                 hien[0].innerHTML = "giày mới";
+                 hien[1].innerHTML="Giá: 4000 vnd"
+            break;
+            case 'anh':
+                hinh.src="80.jpg" ;
+                break;
+                case 'logo':
+                    hinh.src="logo.jpg";
+        }
+    }
+</script>
+</body>
+</html>>

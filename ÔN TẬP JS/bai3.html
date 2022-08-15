@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+
+        <!-- bài 1 -->
+        <div class="b1">
+            <img src="images/slide1.jpg" id="slideshow">
+            <div class="dieukhien">
+                <button onclick="pre()">PRE</button>
+                <button onclick="next()">NEXT</button>
+                <button onclick="auto()">AUTO</button>
+                <button onclick="stop()">STOP</button>
+            </div>
+        </div>
+
+
+        <!-- bài 2 -->
+        <div class="b2">
+            <form name="frmdoimatkhau" onsubmit="return validate()">
+
+                <!-- Tiêu đề -->
+                <h2>ĐỔI MẬT KHẨU</h2>
+
+                <!-- Họ tên -->
+                <div class="fr">
+                    <label for="">Họ và tên</label>
+                    <input type="text" name="txtten" placeholder="Nhập họ và tên">
+                    <div id="loiten" class="mau"></div>
+                </div>
+
+                <!-- email -->
+                <div>
+                    <label for="">Email</label>
+                    <input type="text" name="txtemail" placeholder="Nhập email">
+                    <div id="loiemail" class="mau"></div>
+                </div>
+
+                <!-- Sdt -->
+                <div>
+                    <label for="">sdt</label>
+                <input type="text" name="txtsdt" placeholder="Nhập sdt">
+                <div id="loisdt" class="mau"></div>
+                </div>
+               
+                <!-- mật khẩu cũ -->
+                <div class="fr">
+                    <label for="">Mật khẩu cũ</label>
+                    <input type="password" name="psmkcu" placeholder="Nhập mk cũ">
+                    <div id="loimkcu" class="mau"></div>
+                </div>
+
+                <!-- Mật khẩu mới -->
+                <div class="fr">
+                    <label for="">Mật khẩu mới</label>
+                    <input type="password" name="psmkmoi" placeholder="Nhập mk mới">
+                    <div id="loimkmoi" class="mau"></div>
+                </div>
+
+                <!--Nhập lại Mật khẩu mới -->
+                <div class="fr">
+                    <label for="">Nhập lại mật khẩu mới</label>
+                    <input type="password" name="psnlmkmoi" placeholder="Nhập lại mk mới">
+                    <div id="loinlmkmoi" class="mau"></div>
+                </div>
+
+                <!-- Nút bấm -->
+                <div>
+                    <button type="submit">ĐỔI MẬT KHẨU</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+  <script src="bai3.js"></script>
+</body>
+</html>>

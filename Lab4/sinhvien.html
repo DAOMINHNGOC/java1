@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'>LAB4</script>
+</head>
+<body>
+    <script>
+        var sinhVien ={
+            hoTen : prompt("Nhập họ tên: "),
+            diem : Number(prompt("Nhập điểm: ")),
+            hienThi : function(){
+                if(this.diem >8){
+                    return "Giỏi";
+                }else if(this.diem>7){
+                    return "Khá";
+                }
+                else if(this.diem>5){
+                    return "Trung bình";
+                }else {
+                    return "Yếu";
+                    }
+            }
+        }
+        document.write("Họ tên: "+sinhVien.hoTen +"<br>");
+        document.write("Điểm: "+sinhVien.diem+"<br>")
+        document.write("Kết quả: "+sinhVien.hienThi());
+
+    </script>
+</body>
+</html>>

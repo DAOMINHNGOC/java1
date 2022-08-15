@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var sinhVien = new Object();
+            sinhVien.maSinhVien= 'ph20534',
+            sinhVien.hoVaTen= 'Đào Minh Ngọc',
+            sinhVien.diem= 8,
+            sinhVien.ketQua= function(){
+              if(sinhVien.diem>5){
+                  return "đỗ";
+              }else{
+                  return "trượt";
+              }
+            }
+            var sinhvien = {
+                maSinhVien: "ph1",
+                ten:"ngoc",
+                diem:8,
+                ketqua: function(){
+                    if(this.diem>=5){
+                        return "đỗ";
+                    }
+                    else{
+                        return "trượt";
+                    }
+                }
+            }
+        
+        document.write("mã sinh viên: "+sinhVien.maSinhVien+"<br>");
+        document.write("họ và tên: "+sinhVien.hoVaTen+"<br>");
+        document.write("điểm: "+sinhVien.diem+"<br>");
+        document.write("kết quả: "+sinhVien.ketQua()+"<br>");
+
+        document.write("mã sinh viên: "+sinhvien.masinhvien+"<br>");
+        document.write("họ và tên: "+sinhvien.ten+"<br>");
+        document.write("điểm: "+sinhvien.diem+"<br>");
+        document.write("kết quả: "+sinhvien.ketQua()+"<br>");
+    </script>
+</body>
+</html>>

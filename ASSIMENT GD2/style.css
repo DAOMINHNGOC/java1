@@ -1,0 +1,196 @@
+/* Phần body */
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+#container {
+    width: 960px;
+    margin: 0px auto;
+} 
+/* Phần header */
+
+header {
+    height: 250px;
+    max-height: 344px;
+    background-image: url(../ASS\ GD1/images/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Phần Menu */
+
+nav {
+    line-height: 24px;
+    padding: 10px 10px;
+    background: green;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    transition: 0.4s;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: red;
+    padding: 12px 15px 13px;
+}
+
+.active {
+    background-color: #ffffff;
+    color: red;
+    padding: 12px 15px 13px;
+}
+
+/* Phần Nội dung */
+
+article {
+    margin-top: 5px;
+    padding-bottom: 20px;
+    min-height: 400px;
+    width: 100%;
+    background: #ffffff;
+    float: left;
+}
+
+article p {
+    margin: 10px 0px;
+}
+
+article > table th,
+article > table td {
+    padding: 5px 0px;
+    text-align: center;
+}
+
+article > table td input[type="text"] {
+    width: 90%;
+}
+
+/* Hiển thị ảnh sản phẩm*/
+
+#display {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    margin-bottom: 10px;
+}
+
+#display > img {
+    width: 100%;
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Phần footer */
+ 
+footer {
+    height: 100px;
+    max-height: 100px;
+    background: green;
+    color: #ffffff;
+}
+
+.f1 {
+    width: 25%;
+    height: 100%;
+    background-image: url(../ASS\ GD1/images/logo.jpg);
+    background-position: center center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.f2 {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+
+/* js */
+
+ body {
+    font-size: 16px;
+    background: #f9f9f9;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    width: 440px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px
+}
+
+label i {
+    color: #999;
+    font-size: 80%;
+}
+
+input,
+select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.row {
+    padding-bottom: 10px;
+}
+
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+
+.form-inline label,
+.form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+
+.mau {
+    color: red;
+    font-size: 90%;
+}
+
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0165b6;
+} 

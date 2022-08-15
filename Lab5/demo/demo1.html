@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+        <div id="demo">
+            
+        </div>
+        <p>
+            <button id="btn">tạo thẻ h1</button>
+            <button id="btnDel">Xóa</button>
+        </p>
+        <script>
+            var demo = document.getElementById("demo");
+            var btn = document.getElementById("btn");
+            var btnDel = document.getElementById("btnDel");
+            // Tạo đối tượng node cần tạo mới
+            var h1 = document.createElement("h1");
+            btn.onclick = function(){
+                
+                // xác dịnh node cha và thêm vào
+                demo.appendChild(h1);
+                h1.innerHTML = "Chào các bạn";
+                //Them thuộc tính vào node
+                h1.setAttribute("id","the1");
+                alert(h1.getAttribute("thu5"));
+
+            }
+              btnDel.onclick = function(){
+                  demo.removeChild(h1);
+              }
+            
+        </script>
+</body>
+</html>>

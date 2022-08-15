@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <img src="images/slide1.jpg" id="slideshow" alt="">
+        <div>
+            <button onclick="pre()">PRE</button>
+            <button onclick="next()">NEXT</button>
+            <button onclick="auto()">AUTO</button>
+            <button onclick="stop()">STOP</button>
+        </div>
+    </div>
+    <script>
+        var slideshow = document.querySelector("#slideshow");
+        var index = 0;
+        var imgArr = [];
+        document.body.onload = function(){
+            for(var i = 0; i <4; i++){
+                imgArr[i]  = new Image();
+                imgArr[i].src = "images/slide" +(i+1)+".jpg";
+            }
+            auto();
+        }
+        function pre(){
+            index--;
+            if(index<0)  index = 3;
+            slideshow.src = imgArr[index].src;
+        }
+        function next(){
+            index++;
+            if(index>3)  index = 0;
+            slideshow.src = imgArr[index].src;
+        }
+        var t;
+        function auto(){
+            clearInterval(t);
+            t= setInterval("next()",1500);
+        }
+        function stop(){
+            clearInterval(t);
+        }
+    </script>
+</body>
+</html>>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+<p>
+    <h1> Tinhs Toongr</h1>>
+    <button onclick="getNum(5)">5</button>
+    <button onclick="getOp('+')">+</button>
+    <button onclick="getOp('-')">-</button>
+    <button onclick="getOp('*')">*</button>
+    <button onclick="getOp('/')">/</button>
+    <button onclick="getNum(8)">8</button>
+    <button onclick="result()">=</button>
+    </p>
+    
+   <script>
+      
+       var a = null, b = null;
+       var o = null;
+      function getNUm(x){
+          if(a == null) a = x;
+          else b = x;
+      }
+      function getOp(x){
+      o = x;
+      }
+      function reset(){
+          a = null;
+          b = null;
+      }
+      function result(){
+          switch(o){
+                case "+":
+                alert(a + b);
+                break;
+                case "-":
+                alert(a - b);
+                break;
+                case "*":
+                alert(a * b);
+                break;
+                case "/":
+                alert(a / b);
+                break;            
+          }
+          reset();
+      }
+   </script>
+</body>
+</html>

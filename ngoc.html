@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sinh viên FPT Polytechnic</title>
+</head>
+<body>
+	<form action="#" name="frmDangKy" onsubmit="return validate();">
+
+    <!-- Họ tên -->
+    <input type="text" name="txtHoTen" placeholder="Nhập họ tên">
+    <p id="loiHT" style="color: red;"></p>
+
+    <!-- Số điện thoại -->
+    <input type="text" name="txtSDT" placeholder="Nhập SĐT">
+    <p id="loiSDT" style="color: red;"></p>
+
+    <!-- Email -->
+    <input type="text" name="txtEmail" placeholder="Nhập Email">
+    <p id="loiEmail" style="color: red;"></p>
+
+    <!-- Gửi dữ liệu -->
+  <button type="submit">Gửi dữ liệu</button>
+</form>
+  
+	
+  
+	<!-- lệnh javascrirp -->
+	<script>
+	  function validate() {
+		var hoten = document.frmDangKy.txtHoTen.value;
+      var sdt = document.frmDangKy.txtSDT.value;
+      var email = document.frmDangKy.txtEmail.value;
+
+      //Biến xác thực tổng thể
+      var ok = true;
+
+      //Validate họ tên
+      if (hoten.length == 0) {
+        document.getElementById("loiHT").innerHTML = "Họ tên không được rỗng";
+        ok = false;
+      }
+      else document.getElementById("loiHT").innerHTML = "";
+
+      //Validate SĐT
+    
+      if (sdt.length == 0) {
+        document.getElementById("loiSDT").innerHTML = "SĐT không được rỗng";
+        ok = false;
+     
+      }
+      else document.getElementById("loiSDT").innerHTML = "";
+
+       //Validate Email
+      
+      if (email.length == 0) {
+        document.getElementById("loiEmail").innerHTML = "Email không được rỗng";
+        ok = false;
+     
+      }
+      else document.getElementById("loiEmail").innerHTML = "";
+      
+      //Kiểm tra
+      if(ok){
+        alert("Gửi thành công");
+        return true;
+      }
+      else return false
+    }
+	</script>
+</body>
+</html>

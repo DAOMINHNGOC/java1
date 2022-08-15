@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        
+        // tạo khuôn mẫu cho đối tượng
+        function sinhVien(id, ten, diem){
+            this.id = id ;
+            this.ten = ten;
+            this.diem = diem;
+            this.ketQua = function(){
+                if(this.diem>= 5){
+                    return "đỗ";
+                }else{
+                    return "trượt";
+                }
+            }
+        }
+
+        // Khai báo 
+        var sv =[];
+        var n = Number(prompt("Nhập số phần tử: "));
+        for(var i = 0; i <n ; i++){
+            var id = prompt("Nhập id: ");
+            var ten = prompt("Nhập tên: ");
+            var diem = Number(prompt("Nhập điểm: "));
+            sv[i] = new sinhVien(id,ten,diem);
+            
+        }
+
+        // Xuất thông tin 
+        document.write("Thông tin sinh viên <br>");
+        for(var i in sv){
+        document.write((i)+"."+sv[i].ten+"<br>");
+        document.write("id:"+sv[i].id+"<br>");
+        document.write("Điểm:"+sv[i].diem+"<br>");
+        document.write("Kết quả:"+sv[i].ketQua()+"<br>");
+        }
+        
+    </script>
+</body>
+</html>>

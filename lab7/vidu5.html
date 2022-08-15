@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="../angular.js"></script>
+</head>
+<body ng-app ="myApp">
+    <div ng-controller="myCtrl">
+    <p>Tên sản phẩm <input type="text" ng-model ="tensp"></p>
+    <p>Số lượng <input type="number" ng-model="soluong"></p>
+    <p>Đơn giá <input type="number" ng-model="dongia"></p>
+    <p><button ng-click="them()">Thêm sản phẩm</button></p>
+    
+    <table border="1" style="border-collapse:collapse;">
+       <tr>
+           <td>Stt</td>
+           <td>Tên sản phẩm</td>
+           <td>Đơn giá</td>
+           <td>Số lượng</td>
+           <td>Thành tiền</td>
+       </tr>
+       <tr ng-repeat="item in dsSP">
+           
+           <td>{{$index + 1}}</td>
+           <td>{{item.tensp}}</td>
+           <td>{{item.dongia}}</td>
+           <td><input type="number" value="{{item.soluong}}" ng-model="item.soluong"></td>
+           <td>{{item.dongia *item.soluong}}</td>
+       </tr>
+    </table>
+</div>
+    <script>
+        //tao ung dung
+        var app = angular.module("myApp",[]);
+        //Tao controller
+        app.controller("myCtrl",function($scope){
+            //Khai báo mảng chứa tất cả sản phẩm
+            $scope.dsSP =[];   
+            $scope.them = function(){
+                var sp = [];
+                sp.tensp = $scope.tensp;
+                sp.dongia = $scope.dongia;
+                sp.soluong = $scope.soluong;
+                $scope.dsSP.push(sp);
+            }        
+        });
+        
+    </script>
+</body>
+</html>>

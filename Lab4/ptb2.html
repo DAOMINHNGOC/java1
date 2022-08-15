@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'>bai1</script>
+</head>
+<body>
+    <script>
+        var ptb2 ={
+            a: Number(prompt("A: ")),
+            b: Number(prompt("B: " )),
+            c: Number(prompt("C: ")),
+            giai : function(){
+                var denta = this.b*this.b - 4*this.a*this.c;
+                if(denta == 0){
+                    document.write( "pt có nghiệm kép ");
+                    document.write("x1 = x2 = " + -this.b / (this.a * 2));
+                    }else if(denta > 0){
+                     var x1 = (-this.b- Math.sqrt(denta))/(2*this.a);
+                     var x2 =(-this.b+ Math.sqrt(denta))/(2*this.a);
+                     document.write("x1 ="+x1+ "<br> x2="+x2);
+                     
+                    }
+                    
+                    else {
+                        document.write( "pt vô nghiệm");
+                }
+        
+            }
+           
+        }
+        
+        
+    </script>
+
+    
+        
+        <button onclick="ptb2.giai()">Giải</button>
+    
+</body>
+</html>>

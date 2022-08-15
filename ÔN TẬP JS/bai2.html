@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .mau{
+            color: red;
+        }
+        .container{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" action="" name="frmDoimatkhau" onsubmit="return validate();">
+        <h2>ĐỔI MẬT KHẨU</h2>
+
+        <!-- họ tên -->
+            <div>
+                
+                <div>
+                    <label for="">Họ và tên: </label>
+                    <input type="text" name="txtten" placeholder="Nhập họ tên">
+                    <div id="loiten" class="mau"></div>
+                </div>
+            </div>
+ 
+            <div>
+                <label for="">Email: </label>
+                <div>
+                    <input type="text" name="txtemail" placeholder="Nhập email">
+                    <div id="loiemail" class="mau"></div>
+                </div>
+            </div>
+
+            <div>
+                <label for="">Số điện thoại: </label>
+                <div>
+                    <input type="text" name="txtsdt" placeholder="Nhập số điện thoại">
+                    <div id="loisdt" class="mau"></div>
+                </div>
+            </div>
+
+            
+            <div>
+                <label for="">Mật khẩu cũ: </label>
+                <div>
+                    <input type="password" name="psmkcu" placeholder="Nhập mật khẩu cũ">
+                    <div id="loimkcu" class="mau"></div>
+                </div>
+            </div>
+
+            <div>
+                <label for="">Mật khẩu mới: </label>
+                <div>
+                    <input type="password" name="psmkmoi" placeholder="Nhập mật khẩu mới">
+                    <div id="loimkmoi" class="mau"></div>
+                </div>
+            </div>
+
+            <div>
+                <label for="">Nhập lại mật khẩu mới: </label>
+                <div>
+                    <input type="password" name="psnlmkmoi" placeholder="Nhập lại mật khẩu mới">
+                    <div id="loinlmkmoi" class="mau"></div>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Đổi mật khẩu</button>
+            </div>
+    </form>
+
+    <script>
+        function validate(){
+            var ten = document.frmDoimatkhau.txtten.value;
+            var mkcu = document.frmDoimatkhau.psmkcu.value;
+            var mkmoi = document.frmDoimatkhau.psmkmoi.value;
+            var nlmkmoi = document.frmDoimatkhau.psnlmkmoi.value;
+            var email = document.frmDoimatkhau.txtemail.value;
+            var sdt = document.frmDoimatkhau.txtsdt.value;
+            var ok = true;
+
+            //tên
+            if(ten.length == 0){
+                document.getElementById("loiten").innerHTML = "Cần điền họ tên";
+                ok = false;
+            }
+            else document.getElementById("loiten").innerHTML = "";
+
+            //mkcu
+            if(mkcu.length == 0){
+                document.getElementById("loimkcu").innerHTML = "Cần điền mật khẩu cũ";
+                ok = false;
+            }
+            else if(!mkcu.match("123@abc123")){
+                document.getElementById("loimkcu").innerHTML = "Cần điền đúng định dạng mật khẩu cũ";
+                ok = false;
+            }
+            else document.getElementById("loimkcu").innerHTML = "";
+
+            //mkmoi
+            if(mkmoi.length == 0){
+                document.getElementById("loimkmoi").innerHTML = "Cần điền mật khẩu mới";
+                ok = false;
+            }
+            else if(mkmoi.length >0 && mkmoi.length <=5){
+                document.getElementById("loimkmoi").innerHTML = "mật khẩu yếu";
+                ok = false;
+            }
+            else if(mkmoi.length >=5 && mkmoi.length <8){
+                document.getElementById("loimkmoi").innerHTML = "mật khẩu trung bình";
+                ok = false;
+            }
+            else if(mkmoi.length >=8){
+                document.getElementById("loimkmoi").innerHTML = "mật khẩu mạnh";
+                ok = false;
+            }
+            else document.getElementById("loimkmoi").innerHTML = "";
+
+            //nlmkmoi
+            if(nlmkmoi.length == 0){
+                document.getElementById("loinlmkmoi").innerHTML = "Cần điền nhập lại mật khẩu mới";
+                ok = false;
+            }
+            else if(!nlmkmoi.match(mkmoi)){
+                document.getElementById("loinlmkmoi").innerHTML = "Cần điền nhập lại đúng định dạng mật khẩu mới";
+                ok = false;
+            }
+            else document.getElementById("loinlmkmoi").innerHTML = "";
+
+
+            //email
+            var regEmail = /^\w+@\w+\.\w{3,6}$/;
+            
+            if(email.length == 0){
+                document.getElementById("loiemail").innerHTML = "Cần điền email";
+                ok = false;
+            }
+            else if(!email.match(regEmail)){
+                document.getElementById("loiemail").innerHTML = "Cần điền đúng định dạng email";
+                ok = false;
+            }
+            else document.getElementById("loiemail").innerHTML = "";
+
+            //sdt
+            var regSDT = /^0[0-9]{9}$/;
+            if(sdt.length == 0){
+                document.getElementById("loisdt").innerHTML = "Cần điền số điện thoại";
+                ok = false;
+            }
+            else if(!sdt.match(regSDT)){
+                document.getElementById("loisdt").innerHTML = "Cần điền đúng định dạng số điện thoại";
+                ok = false;
+            }
+            else document.getElementById("loisdt").innerHTML = "";
+
+
+            if(ok){
+                alert("Đổi mật khẩu thành công");
+                return true;
+            }
+            else return false;
+        }
+    </script>
+</body>
+</html>>

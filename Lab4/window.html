@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        var newwindow;
+        function openw(){
+            newwindow =window.open("https://www.youtube.com/watch?v=3oeQXbE210A","youtobe","toobar = yes","menubar = yes");
+        }
+        function closew(){
+            if(newwindow){
+            newwindow.close();
+            }
+        }
+        function checkw(){
+            if(newwindow){
+            if(newwindow.closed){
+                alert("Đã đóng của sổ");
+            }
+            else{
+                alert("Cửa sổ đang bật");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    
+     <button onclick="openw()">Mở cửa sổ mới</button>
+     <button onclick="closew()">Đóng cửa sổ mới</button>
+     <button onclick="checkw()">Kiểm tra cửa sổ mới đã đóng hay chưa</button>
+</body>
+</html>>
